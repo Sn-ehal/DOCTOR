@@ -433,7 +433,9 @@
 
                   {/* Summary Banner */}
                   <div className="bg-teal-50/70 dark:bg-teal-950/50 p-4 border-b border-teal-100 dark:border-teal-900 flex items-center gap-3">
-                    <img src={doctor.avatar} alt={doctor.name} className="w-12 h-12 rounded-xl object-cover border border-white dark:border-slate-700 shadow" />
+                    <div className="w-12 h-12 rounded-xl border border-white dark:border-slate-700 shadow flex items-center justify-center bg-slate-50 dark:bg-slate-800 text-slate-400">
+                      <DynamicIcon name={doctor.avatar} className="w-6 h-6" />
+                    </div>
                     <div className="flex-1 text-xs">
                       <h4 className="font-bold text-slate-900 dark:text-white">{doctor.name}</h4>
                       <p className="text-slate-500 dark:text-slate-400">{doctor.specialtyName} • {consultationType === 'in-person' ? 'Clinic Visit' : 'Video Consultation'}</p>

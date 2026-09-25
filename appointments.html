@@ -182,7 +182,9 @@
                   <div key={apt.id} className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-4">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-3">
-                        <img src={apt.doctorAvatar} alt={apt.doctorName} className="w-14 h-14 rounded-2xl object-cover border border-slate-100 dark:border-slate-800" />
+                        <div className="w-14 h-14 rounded-2xl border border-slate-100 dark:border-slate-800 flex items-center justify-center bg-slate-50 dark:bg-slate-800 text-slate-400">
+                          <DynamicIcon name={apt.doctorAvatar} className="w-7 h-7" />
+                        </div>
                         <div>
                           <span className="text-[10px] font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/60 px-2 py-0.5 rounded-full border border-teal-100 dark:border-teal-900">
                             {apt.doctorSpecialty}
@@ -274,7 +276,9 @@
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <img src={receiptAppointment.doctorAvatar} alt={receiptAppointment.doctorName} className="w-12 h-12 rounded-xl object-cover border border-slate-200 dark:border-slate-700" />
+                      <div className="w-12 h-12 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-center bg-slate-50 dark:bg-slate-800 text-slate-400">
+                        <DynamicIcon name={receiptAppointment.doctorAvatar} className="w-6 h-6" />
+                      </div>
                       <div>
                         <h4 className="font-bold text-slate-900 dark:text-white text-sm">{receiptAppointment.doctorName}</h4>
                         <p className="text-slate-500 dark:text-slate-400">{receiptAppointment.doctorSpecialty}</p>

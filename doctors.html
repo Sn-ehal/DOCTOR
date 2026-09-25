@@ -277,7 +277,9 @@
                       <div key={doc.id} className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition-all hover:border-teal-200 dark:hover:border-teal-800 flex flex-col overflow-hidden group">
                         <div className="p-5 flex gap-4 items-start">
                           <div className="relative flex-shrink-0">
-                            <img src={doc.avatar} alt={doc.name} className="w-20 h-20 rounded-2xl object-cover border border-slate-100 dark:border-slate-800 shadow-inner group-hover:scale-105 transition-transform" />
+                            <div className="w-20 h-20 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-inner flex items-center justify-center bg-slate-50 dark:bg-slate-800 text-slate-400 group-hover:scale-105 transition-transform">
+                              <DynamicIcon name={doc.avatar} className="w-10 h-10" />
+                            </div>
                             <div className="absolute -bottom-2 -right-1 bg-emerald-500 text-white rounded-full p-1 shadow">
                               <DynamicIcon name="check" className="w-3 h-3 stroke-[3]" />
                             </div>
